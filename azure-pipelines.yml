@@ -1,0 +1,20 @@
+# Azure Pipelines
+
+# Trigger on specific branches
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    echo "Setting up Java environment..."
+    # Script commands to set up Java version go here
+    # For example:
+    sudo apt-get install -y openjdk-11-jdk
+- script: |
+    echo "Running the build..."
+    # Your build commands here

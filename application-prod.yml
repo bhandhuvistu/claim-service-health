@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: claim-service-health-prod
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO
+    com.example: INFO
