@@ -1,87 +1,20 @@
-trigger:
-  - main
-  - develop
+# Azure Pipelines
 
-pr:
-  - main
+# Trigger on specific branches
+trigger:
+  branches:
+    include:
+      - main
 
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  JAVA_HOME: '/usr/lib/jvm/zulu-11-azure-amd64'
-  MAVEN_CACHE_FOLDER: $(Pipeline.Workspace)/.m2/repository
-  BUILD_VERSION: $(Build.BuildId)
-
-stages:
-  - stage: Build
-    displayName: 'Build and Test'
-    jobs:
-      - job: BuildJob
-        displayName: 'Build, Test, and Package'
-        steps:
-          - task: UseJavaVersion@1
-            displayName: 'Set Java Version'
-            inputs:
-              versionSpec: '11'
-
-          - task: Cache@2
-            displayName: 'Cache Maven Dependencies'
-            inputs:
-              key: 'maven | "$(Agent.OS)" | **/pom.xml'
-              restoreKeys: |
-                maven | "$(Agent.OS)"
-              path: $(MAVEN_CACHE_FOLDER)
-
-          - script: mvn clean package -B -DskipTests
-            displayName: 'Maven Build'
-
-          - script: mvn test -B
-            displayName: 'Run Unit Tests'
-
-          - task: PublishTestResults@2
-            displayName: 'Publish Test Results'
-            inputs:
-              testResultsFormat: 'JUnit'
-              testResultsFiles: '**/target/surefire-reports/TEST-*.xml'
-              failTaskOnFailedTests: false
-
-          - task: PublishBuildArtifacts@1
-            displayName: 'Publish Build Artifacts'
-            inputs:
-              PathtoPublish: 'target'
-              ArtifactName: 'claim-service-health-$(Build.BuildId)'
-
-  - stage: Deploy_Dev
-    displayName: 'Deploy to Dev'
-    dependsOn: Build
-    condition: succeeded()
-    jobs:
-      - job: DeployDev
-        displayName: 'Deploy to Development'
-        steps:
-          - task: DownloadBuildArtifacts@0
-            displayName: 'Download Artifacts'
-            inputs:
-              artifactName: 'claim-service-health-$(Build.BuildId)'
-              downloadPath: '$(Pipeline.Workspace)'
-
-          - script: echo "Deployment to Dev environment completed"
-            displayName: 'Deploy Dev'
-
-  - stage: Deploy_Prod
-    displayName: 'Deploy to Prod'
-    dependsOn: Deploy_Dev
-    condition: succeeded()
-    jobs:
-      - job: DeployProd
-        displayName: 'Deploy to Production'
-        steps:
-          - task: DownloadBuildArtifacts@0
-            displayName: 'Download Artifacts'
-            inputs:
-              artifactName: 'claim-service-health-$(Build.BuildId)'
-              downloadPath: '$(Pipeline.Workspace)'
-
-          - script: echo "Deployment to Prod environment completed"
-            displayName: 'Deploy Prod'
+steps:
+- script: |
+    echo "Setting up Java environment..."
+    # Script commands to set up Java version go here
+    # For example:
+    sudo apt-get install -y openjdk-11-jdk
+- script: |
+    echo "Running the build..."
+    # Your build commands here
