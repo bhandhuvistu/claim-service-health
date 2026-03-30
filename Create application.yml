@@ -1,0 +1,22 @@
+cat > src/main/resources/application.yml << 'EOF'
+spring:
+  application:
+    name: claim-service-health
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: INFO
+    com.example: DEBUG
+EOF
