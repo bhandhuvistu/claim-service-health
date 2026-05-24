@@ -11,15 +11,17 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#200122,#6f0000);
-overflow:hidden;
+background:linear-gradient(135deg,#2b001f,#8b0000);
 color:white;
+overflow:hidden;
 height:100vh;
 }
+
+/* MAIN CONTAINER */
 
 .container{
 height:100vh;
@@ -34,27 +36,31 @@ text-align:center;
 position:fixed;
 bottom:-20px;
 font-size:20px;
-animation:float 6s linear infinite;
 color:#ff4da6;
+animation:float 6s linear infinite;
+z-index:1;
 }
 
 @keyframes float{
+
 0%{
 transform:translateY(0) rotate(0deg);
 opacity:1;
 }
+
 100%{
 transform:translateY(-100vh) rotate(360deg);
 opacity:0;
 }
+
 }
 
 /* TITLE */
 
 .title{
-font-size:60px;
+font-size:65px;
 margin-top:20px;
-color:#ff66cc;
+color:#ff80bf;
 text-shadow:0 0 20px white;
 }
 
@@ -63,12 +69,12 @@ text-shadow:0 0 20px white;
 .photos{
 display:flex;
 justify-content:center;
-gap:40px;
+gap:50px;
 margin-top:30px;
 flex-wrap:wrap;
 }
 
-.photos img{
+.card img{
 width:230px;
 height:230px;
 border-radius:50%;
@@ -77,36 +83,36 @@ border:6px solid white;
 box-shadow:0 0 30px pink;
 }
 
-.photos h2{
+.card h2{
 margin-top:15px;
-font-size:32px;
+font-size:35px;
 color:#ffb3d9;
 }
 
-/* LOVE LETTER */
+/* LETTER */
 
 .letter{
-max-width:850px;
+max-width:900px;
 margin:40px auto;
-padding:30px;
-background:rgba(255,255,255,0.1);
+padding:35px;
+background:rgba(255,255,255,0.08);
 border-radius:25px;
-font-size:24px;
-line-height:1.8;
+font-size:25px;
+line-height:1.9;
 backdrop-filter:blur(10px);
-box-shadow:0 0 20px rgba(255,255,255,0.2);
+box-shadow:0 0 25px rgba(255,255,255,0.2);
 }
 
 /* BUTTONS */
 
 .buttons{
 margin-top:40px;
-height:120px;
+height:140px;
 position:relative;
 }
 
 button{
-padding:15px 35px;
+padding:16px 40px;
 font-size:28px;
 border:none;
 border-radius:50px;
@@ -131,16 +137,6 @@ button:hover{
 transform:scale(1.1);
 }
 
-/* RESULT */
-
-#result{
-margin-top:40px;
-font-size:40px;
-color:yellow;
-text-shadow:0 0 20px white;
-padding-bottom:50px;
-}
-
 /* SECOND PAGE */
 
 .secondPage{
@@ -158,14 +154,13 @@ animation:fadeIn 2s;
 }
 
 .secondContent{
-max-width:900px;
+max-width:950px;
 margin:auto;
-background:rgba(255,255,255,0.08);
 padding:40px;
+background:rgba(255,255,255,0.08);
 border-radius:25px;
-line-height:2;
 font-size:28px;
-color:white;
+line-height:2;
 box-shadow:0 0 30px pink;
 }
 
@@ -177,12 +172,15 @@ color:#ff66cc;
 }
 
 @keyframes fadeIn{
+
 from{
 opacity:0;
 }
+
 to{
 opacity:1;
 }
+
 }
 
 /* MOBILE */
@@ -190,17 +188,17 @@ opacity:1;
 @media(max-width:768px){
 
 .title{
-font-size:42px;
+font-size:45px;
 }
 
-.photos img{
+.card img{
 width:170px;
 height:170px;
 }
 
 .letter{
 font-size:20px;
-padding:20px;
+padding:22px;
 }
 
 button{
@@ -214,7 +212,7 @@ padding:25px;
 }
 
 .secondContent h1{
-font-size:40px;
+font-size:42px;
 }
 
 }
@@ -230,12 +228,12 @@ font-size:40px;
 
 <div class="photos">
 
-<div>
+<div class="card">
 <img src="krish.jpg.jpeg">
 <h2>Krish 💖</h2>
 </div>
 
-<div>
+<div class="card">
 <img src="siri.jpg.jpeg">
 <h2>Siri 💖</h2>
 </div>
@@ -263,7 +261,7 @@ font-size:40px;
 Siri...  
 నా life మొత్తం నీతో spend చేయాలని ఉంది 💞<br><br>
 
-Will You Stay With Me Forever...? 💍
+Will You Stay With Me Forever...? 💍❤️
 
 </div>
 
@@ -279,8 +277,6 @@ No 😜
 
 </div>
 
-<div id="result"></div>
-
 </div>
 
 <!-- SECOND PAGE -->
@@ -293,25 +289,30 @@ No 😜
 
 నా జీవితంలోకి వచ్చిన అందమైన feeling నువ్వే... 💖<br><br>
 
-నిన్ను చూసిన ప్రతిసారి నా heart కొత్తగా beat అవుతుంది...  
-నీ smile చూస్తే నా బాధ అంతా మాయమవుతుంది ✨<br><br>
+నిన్ను చూసిన ప్రతిసారి  
+నా heart కొత్తగా beat అవుతుంది ❤️<br><br>
 
-నీతో మాట్లాడితే నాకు ప్రపంచం మొత్తం silent అయినట్టు ఉంటుంది...  
+నీ smile చూస్తే  
+నా బాధ అంతా మాయమవుతుంది ✨<br><br>
+
+నీతో మాట్లాడితే  
+ప్రపంచం మొత్తం silent అయినట్టు ఉంటుంది...  
 ఎందుకంటే నా ప్రపంచం నువ్వే Siri ❤️<br><br>
 
 నేను perfect person కాకపోవచ్చు...  
 కానీ నిన్ను life long happy గా చూసుకోవడానికి మాత్రం ప్రయత్నిస్తాను 💍<br><br>
 
 నీ కన్నీళ్లు నా బాధ...  
-నీ నవ్వు నా happiness...  
-నీ చేయి నా forever promise 🤝❤️<br><br>
+నీ నవ్వు నా happiness... ❤️<br><br>
+
+నీ చేయి నా forever promise 🤝💖<br><br>
 
 ప్రతి జన్మలో కూడా  
-నేను నిన్నే ప్రేమిస్తాను Siri 💖<br><br>
+నేను నిన్నే ప్రేమిస్తాను Siri 💞<br><br>
 
 Thank You So Much For Accepting My Love 🥹❤️<br><br>
 
-I Love You Forever Siri 💞
+I Love You Forever Siri 💖
 
 </div>
 
@@ -323,22 +324,30 @@ I Love You Forever Siri 💞
 
 function yesLove(){
 
-document.getElementById("secondPage").style.display="block";
+document.body.style.overflow = "auto";
+
+document.getElementById("secondPage").style.display = "block";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 }
 
 /* RUNNING NO BUTTON */
 
-const noBtn=document.getElementById("noBtn");
+const noBtn = document.getElementById("noBtn");
 
 noBtn.addEventListener("mouseover",()=>{
 
-const x=Math.random()*(window.innerWidth-150);
+const x = Math.random() * (window.innerWidth - 150);
 
-const y=Math.random()*(window.innerHeight-150);
+const y = Math.random() * (window.innerHeight - 150);
 
-noBtn.style.left=x+"px";
-noBtn.style.top=y+"px";
+noBtn.style.left = x + "px";
+
+noBtn.style.top = y + "px";
 
 });
 
@@ -346,16 +355,16 @@ noBtn.style.top=y+"px";
 
 function createHeart(){
 
-const heart=document.createElement("div");
+const heart = document.createElement("div");
 
 heart.classList.add("heart");
 
-heart.innerHTML="❤️";
+heart.innerHTML = "❤️";
 
-heart.style.left=Math.random()*100+"vw";
+heart.style.left = Math.random()*100 + "vw";
 
-heart.style.animationDuration=
-Math.random()*3+3+"s";
+heart.style.animationDuration =
+Math.random()*3 + 3 + "s";
 
 document.body.appendChild(heart);
 
