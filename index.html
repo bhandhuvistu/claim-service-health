@@ -141,6 +141,50 @@ text-shadow:0 0 20px white;
 padding-bottom:50px;
 }
 
+/* SECOND PAGE */
+
+.secondPage{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+overflow-y:auto;
+padding:40px;
+z-index:999;
+animation:fadeIn 2s;
+}
+
+.secondContent{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:25px;
+line-height:2;
+font-size:28px;
+color:white;
+box-shadow:0 0 30px pink;
+}
+
+.secondContent h1{
+text-align:center;
+font-size:60px;
+margin-bottom:30px;
+color:#ff66cc;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -164,6 +208,15 @@ font-size:22px;
 padding:12px 28px;
 }
 
+.secondContent{
+font-size:22px;
+padding:25px;
+}
+
+.secondContent h1{
+font-size:40px;
+}
+
 }
 
 </style>
@@ -178,12 +231,12 @@ padding:12px 28px;
 <div class="photos">
 
 <div>
-<img src="krish.jpg">
+<img src="krish.jpg.jpeg">
 <h2>Krish 💖</h2>
 </div>
 
 <div>
-<img src="siri.jpg">
+<img src="siri.jpg.jpeg">
 <h2>Siri 💖</h2>
 </div>
 
@@ -193,29 +246,22 @@ padding:12px 28px;
 
 <h2>నా ప్రియమైన Siri ❤️</h2><br>
 
-నీ smile చూస్తే నా ప్రపంచం మొత్తం beautiful గా మారిపోతుంది... ✨<br><br>
+నీ smile చూస్తే నా ప్రపంచం మొత్తం beautiful గా మారిపోతుంది ✨<br><br>
 
 నీ మాటల్లో నాకు peace ఉంటుంది...  
-నీ presence లో నాకు happiness ఉంటుంది... 💖<br><br>
+నీ presence లో నాకు happiness ఉంటుంది 💖<br><br>
 
 నిన్ను ప్రేమించడం నా decision కాదు...  
 నా heart స్వయంగా నిన్నే ప్రేమించింది ❤️<br><br>
 
 నువ్వు నా జీవితంలోకి వచ్చిన తర్వాత  
-ప్రతి రోజు special అయింది... 🌸<br><br>
+ప్రతి రోజు special అయింది 🌸<br><br>
 
 నిన్ను చూసినప్పుడు time ఆగిపోవాలి అనిపిస్తుంది...  
 నువ్వు నవ్వితే నా ప్రపంచం మొత్తం వెలిగిపోతుంది ✨<br><br>
 
 Siri...  
-నా life మొత్తం నీతో spend చేయాలని ఉంది...  
-నీ happiness కి reason అవ్వాలని ఉంది 💞<br><br>
-
-నీ బాధలో నీ shadowలా...  
-నీ happiness లో నీ smileలా ఉండాలని ఉంది ❤️<br><br>
-
-ఎన్ని జన్మలు వచ్చినా  
-నా heart నిన్నే ప్రేమిస్తుంది Siri ❤️<br><br>
+నా life మొత్తం నీతో spend చేయాలని ఉంది 💞<br><br>
 
 Will You Stay With Me Forever...? 💍
 
@@ -237,14 +283,47 @@ No 😜
 
 </div>
 
+<!-- SECOND PAGE -->
+
+<div class="secondPage" id="secondPage">
+
+<div class="secondContent">
+
+<h1>Siri ❤️</h1>
+
+నా జీవితంలోకి వచ్చిన అందమైన feeling నువ్వే... 💖<br><br>
+
+నిన్ను చూసిన ప్రతిసారి నా heart కొత్తగా beat అవుతుంది...  
+నీ smile చూస్తే నా బాధ అంతా మాయమవుతుంది ✨<br><br>
+
+నీతో మాట్లాడితే నాకు ప్రపంచం మొత్తం silent అయినట్టు ఉంటుంది...  
+ఎందుకంటే నా ప్రపంచం నువ్వే Siri ❤️<br><br>
+
+నేను perfect person కాకపోవచ్చు...  
+కానీ నిన్ను life long happy గా చూసుకోవడానికి మాత్రం ప్రయత్నిస్తాను 💍<br><br>
+
+నీ కన్నీళ్లు నా బాధ...  
+నీ నవ్వు నా happiness...  
+నీ చేయి నా forever promise 🤝❤️<br><br>
+
+ప్రతి జన్మలో కూడా  
+నేను నిన్నే ప్రేమిస్తాను Siri 💖<br><br>
+
+Thank You So Much For Accepting My Love 🥹❤️<br><br>
+
+I Love You Forever Siri 💞
+
+</div>
+
+</div>
+
 <script>
 
 /* YES BUTTON */
 
 function yesLove(){
 
-document.getElementById("result").innerHTML =
-"❤️ Siri accepted Krish's love forever ❤️";
+document.getElementById("secondPage").style.display="block";
 
 }
 
