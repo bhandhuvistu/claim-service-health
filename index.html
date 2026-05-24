@@ -11,23 +11,14 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#2b001f,#8b0000);
-color:white;
+background:linear-gradient(135deg,#1a001a,#660033,#99004d);
 overflow:hidden;
+color:white;
 height:100vh;
-}
-
-/* MAIN CONTAINER */
-
-.container{
-height:100vh;
-overflow-y:auto;
-padding:20px;
-text-align:center;
 }
 
 /* FLOATING HEARTS */
@@ -35,7 +26,7 @@ text-align:center;
 .heart{
 position:fixed;
 bottom:-20px;
-font-size:20px;
+font-size:22px;
 color:#ff4da6;
 animation:float 6s linear infinite;
 z-index:1;
@@ -55,13 +46,35 @@ opacity:0;
 
 }
 
+/* MAIN */
+
+.container{
+height:100vh;
+overflow-y:auto;
+padding:20px;
+text-align:center;
+}
+
 /* TITLE */
 
 .title{
-font-size:65px;
+font-size:70px;
 margin-top:20px;
-color:#ff80bf;
-text-shadow:0 0 20px white;
+color:#ff99cc;
+text-shadow:0 0 25px white;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 15px pink;
+}
+
+to{
+text-shadow:0 0 35px white;
+}
+
 }
 
 /* PHOTOS */
@@ -70,50 +83,50 @@ text-shadow:0 0 20px white;
 display:flex;
 justify-content:center;
 gap:50px;
-margin-top:30px;
+margin-top:35px;
 flex-wrap:wrap;
 }
 
 .card img{
-width:230px;
-height:230px;
+width:240px;
+height:240px;
 border-radius:50%;
 object-fit:cover;
 border:6px solid white;
-box-shadow:0 0 30px pink;
+box-shadow:0 0 35px pink;
 }
 
 .card h2{
 margin-top:15px;
 font-size:35px;
-color:#ffb3d9;
+color:#ffd6eb;
 }
 
 /* LETTER */
 
 .letter{
-max-width:900px;
-margin:40px auto;
-padding:35px;
+max-width:950px;
+margin:45px auto;
+padding:40px;
 background:rgba(255,255,255,0.08);
-border-radius:25px;
-font-size:25px;
-line-height:1.9;
-backdrop-filter:blur(10px);
-box-shadow:0 0 25px rgba(255,255,255,0.2);
+border-radius:30px;
+font-size:26px;
+line-height:2;
+backdrop-filter:blur(12px);
+box-shadow:0 0 35px rgba(255,255,255,0.2);
 }
 
 /* BUTTONS */
 
 .buttons{
-margin-top:40px;
-height:140px;
+margin-top:50px;
+height:150px;
 position:relative;
 }
 
 button{
-padding:16px 40px;
-font-size:28px;
+padding:18px 45px;
+font-size:30px;
 border:none;
 border-radius:50px;
 cursor:pointer;
@@ -123,7 +136,7 @@ transition:0.3s;
 .yes{
 background:#ff1493;
 color:white;
-box-shadow:0 0 20px pink;
+box-shadow:0 0 25px pink;
 }
 
 .no{
@@ -154,21 +167,21 @@ animation:fadeIn 2s;
 }
 
 .secondContent{
-max-width:950px;
+max-width:1000px;
 margin:auto;
-padding:40px;
+padding:45px;
 background:rgba(255,255,255,0.08);
-border-radius:25px;
-font-size:28px;
+border-radius:30px;
+font-size:30px;
 line-height:2;
-box-shadow:0 0 30px pink;
+box-shadow:0 0 35px pink;
 }
 
 .secondContent h1{
 text-align:center;
-font-size:60px;
-margin-bottom:30px;
-color:#ff66cc;
+font-size:70px;
+margin-bottom:35px;
+color:#ff80bf;
 }
 
 @keyframes fadeIn{
@@ -192,18 +205,18 @@ font-size:45px;
 }
 
 .card img{
-width:170px;
-height:170px;
+width:180px;
+height:180px;
 }
 
 .letter{
 font-size:20px;
-padding:22px;
+padding:25px;
 }
 
 button{
 font-size:22px;
-padding:12px 28px;
+padding:12px 30px;
 }
 
 .secondContent{
@@ -212,7 +225,7 @@ padding:25px;
 }
 
 .secondContent h1{
-font-size:42px;
+font-size:45px;
 }
 
 }
@@ -242,33 +255,42 @@ font-size:42px;
 
 <div class="letter">
 
-<h2>నా ప్రియమైన Siri ❤️</h2><br>
+<h2 style="text-align:center; font-size:50px; color:#ffb3d9;">
+నా ప్రియమైన Siri ❤️
+</h2><br><br>
 
-నీ smile చూస్తే నా ప్రపంచం మొత్తం beautiful గా మారిపోతుంది ✨<br><br>
+నిన్ను మొదటిసారి చూసిన రోజు నుంచి  
+నా ప్రపంచం మొత్తం మారిపోయింది ✨<br><br>
+
+నీ smile చూస్తే  
+నా రోజు మొత్తం beautiful గా మారిపోతుంది 🌸<br><br>
 
 నీ మాటల్లో నాకు peace ఉంటుంది...  
 నీ presence లో నాకు happiness ఉంటుంది 💖<br><br>
 
-నిన్ను ప్రేమించడం నా decision కాదు...  
+నిన్ను ప్రేమించడం  
+నేను తీసుకున్న decision కాదు...  
 నా heart స్వయంగా నిన్నే ప్రేమించింది ❤️<br><br>
 
 నువ్వు నా జీవితంలోకి వచ్చిన తర్వాత  
-ప్రతి రోజు special అయింది 🌸<br><br>
+ప్రతి రోజు special అయింది ✨<br><br>
 
-నిన్ను చూసినప్పుడు time ఆగిపోవాలి అనిపిస్తుంది...  
-నువ్వు నవ్వితే నా ప్రపంచం మొత్తం వెలిగిపోతుంది ✨<br><br>
+నిన్ను చూసినప్పుడు  
+time ఆగిపోవాలి అనిపిస్తుంది...  
+నువ్వు నవ్వితే  
+నా ప్రపంచం మొత్తం వెలిగిపోతుంది 💞<br><br>
 
 Siri...  
-నా life మొత్తం నీతో spend చేయాలని ఉంది 💞<br><br>
+నా life మొత్తం నీతో spend చేయాలని ఉంది 💍❤️<br><br>
 
-Will You Stay With Me Forever...? 💍❤️
+Will You Stay With Me Forever...? 💖
 
 </div>
 
 <div class="buttons">
 
 <button class="yes" onclick="yesLove()">
-Yes 💖
+Yes ❤️
 </button>
 
 <button class="no" id="noBtn">
@@ -287,7 +309,8 @@ No 😜
 
 <h1>Siri ❤️</h1>
 
-నా జీవితంలోకి వచ్చిన అందమైన feeling నువ్వే... 💖<br><br>
+నా జీవితంలోకి వచ్చిన  
+అందమైన feeling నువ్వే 💖<br><br>
 
 నిన్ను చూసిన ప్రతిసారి  
 నా heart కొత్తగా beat అవుతుంది ❤️<br><br>
@@ -303,16 +326,30 @@ No 😜
 కానీ నిన్ను life long happy గా చూసుకోవడానికి మాత్రం ప్రయత్నిస్తాను 💍<br><br>
 
 నీ కన్నీళ్లు నా బాధ...  
-నీ నవ్వు నా happiness... ❤️<br><br>
+నీ నవ్వు నా happiness... 💖<br><br>
 
-నీ చేయి నా forever promise 🤝💖<br><br>
+నీ చేయి నా forever promise 🤝❤️<br><br>
+
+నువ్వు tired అయినప్పుడు  
+నీకు peace అవ్వాలి...  
+నువ్వు ఏడ్చినప్పుడు  
+నీ కన్నీళ్లను తుడిచే వ్యక్తి నేను అవ్వాలి 😔❤️<br><br>
+
+నువ్వు కోపంగా ఉన్నా కూడా  
+నిన్నే ప్రేమిస్తాను...  
+నువ్వు silent గా ఉన్నా కూడా  
+నీ కోసం wait చేస్తాను 💞<br><br>
+
+ఎందుకంటే...  
+నా ప్రేమ temporary కాదు Siri...  
+ఇది నా చివరి శ్వాస వరకు ఉంటుంది ❤️<br><br>
 
 ప్రతి జన్మలో కూడా  
-నేను నిన్నే ప్రేమిస్తాను Siri 💞<br><br>
+నా heart నిన్నే వెతుకుతుంది 💖<br><br>
 
 Thank You So Much For Accepting My Love 🥹❤️<br><br>
 
-I Love You Forever Siri 💖
+I Love You Forever Siri 💞
 
 </div>
 
